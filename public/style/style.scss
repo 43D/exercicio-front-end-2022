@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "bootstrap/bootstrap.scss";
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+$orage-1: #f0813d;
+
+@include media-breakpoint-up(lg) {
+    #sidebar {
+        height: 100vh;
+        width: 17vw;
+        align-items: stretch;
+        flex-direction: column;
+        #sidebarCollapse {
+            flex-direction: column;
+            .navbar-nav {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    #sidebar {
+        background-color: $orage-1;
+        .navbar-collapse {
+            background-color: $white;
+        }
+    }
+    .collapse-lg {
+        display: none;
+    }
+}
+.bg-orange-1 {
+    background-color: $orage-1;
+}
