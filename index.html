@@ -11,8 +11,8 @@
 
 <body>
     <div class="container-fluid p-0 m-0">
-        <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
-            <nav id="sidebar" class="navbar p-0 navbar-expand-lg">
+        <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary" id="page">
+            <nav id="sidebar" class="navbar p-0 navbar-expand-lg border-end shadow">
                 <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse"
                     data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation" id="buttonCollapse">
@@ -22,8 +22,11 @@
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                     </svg>
                 </button>
-                <div class="bg-orange-1 navbar-brand p-4 m-0">
+                <div class="bg-orange-1 navbar-brand p-4 m-0 h-10">
                     <a class="" href="#">SLACA 2019</a>
+                </div>
+                <div class="p-4 m-0 h-10 collapse-lg-mobile">
+                    profile
                 </div>
                 <div class="collapse-lg">
                     <img class="collapse-lg w-100" src="./public/img/dewey4.jpg" alt=" ... ">
@@ -43,7 +46,7 @@
                             <a class="nav-link ps-3" href="#">Eixos temáticos</a>
                         </li>
                         <li class="nav-item border-bottom active">
-                            <a class="nav-link ps-3" href="#">Trabalhos</a>
+                            <a class="nav-link ps-3" href="#page">Trabalhos</a>
                         </li>
                         <li class="nav-item border-bottom">
                             <a class="nav-link ps-3" href="#">Contato</a>
@@ -51,29 +54,66 @@
                     </ul>
                 </div>
             </nav>
-            <div class="w-100">
-                <header class="row m-0">
-                    <div class="col-12">
-                        cssssssssssssssssssssssssssssssss
+            <div class="w-100 p-0" id="conteudo">
+                <header class="row m-0 h-lg-10 bg-gray-1 px-4">
+                    <div class="col-12 col-lg-8">
+                        <p class="m-0"><span id="titulo">Anais do Simpósio Latino Americano de Ciências de
+                                Alimentos</span></p>
+                        <p class="m-0"><span id="titulo_alt">Anais do 13º Simpósio Latino Americano de Ciência de
+                                Alimentos</span></p>
+                        <p class="m-0">ISSN: <span id="issn">1234-5678</span></p>
                     </div>
+                    <div class="collapse-lg col-lg-4">profile</div>
                 </header>
-                <main class="row m-0">
+                <main class="row m-0 px-4">
+                    <div class="col-12 col-lg-9">
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        aa
+
+                    </div>
                     <div class="col-12">
-                        mmmm
+                        aaaaaaaaaaaaaaaaaaaaaa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
+                        aa<br>
                     </div>
                 </main>
+                <footer class="row m-0 px-4 h-15">
+                    pé do site
+                </footer>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
             integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
