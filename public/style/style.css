@@ -8722,4 +8722,7 @@ textarea.form-control-lg {
 .col-0 {
   display: none !important; }
 
+.absolute {
+  position: absolute !important; }
+
 /*# sourceMappingURL=style.css.map */
