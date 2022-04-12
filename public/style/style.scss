@@ -28,12 +28,15 @@ $sidebar: 17vw;
         }
     }
     #aside-main {
-        max-height: 31vw;
+        max-height: 32.5vw;
     }
-    
+
     #conteudo {
         position: relative;
         margin-left: $sidebar;
+    }
+    .profile-image {
+        min-height: 45px;
     }
     .collapse-lg-mobile {
         display: none;
@@ -74,12 +77,33 @@ $sidebar: 17vw;
     .collapse-lg {
         display: none;
     }
+    .profile-image {
+        min-height: 25px;
+        height: 2vh;
+    }
+    .dropdown-menu {
+        right: 0 !important;
+        left: unset !important;
+    }
+}
+
+.dropdown-menu show {
+    min-width: none;
+}
+.profile::after {
+    content: unset;
+}
+.profile-image {
+    height: 6vh;
 }
 .bg-orange-1 {
     background-color: $orage-1;
 }
 .orange-1 {
     color: $orage-1;
+}
+.border-orange {
+    border-color: $orage-1!important;
 }
 .bg-gray-1 {
     background-color: $gray-1;
@@ -105,7 +129,6 @@ $sidebar: 17vw;
 ::-webkit-scrollbar {
     width: 5px;
 }
-
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
@@ -114,7 +137,6 @@ $sidebar: 17vw;
     background: #888;
     border-radius: 5px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }

@@ -8691,11 +8691,14 @@ textarea.form-control-lg {
         flex-direction: column; }
 
   #aside-main {
-    max-height: 31vw; }
+    max-height: 32.5vw; }
 
   #conteudo {
     position: relative;
     margin-left: 17vw; }
+
+  .profile-image {
+    min-height: 45px; }
 
   .collapse-lg-mobile {
     display: none; }
@@ -8730,12 +8733,32 @@ textarea.form-control-lg {
       background-color: #fff; }
 
   .collapse-lg {
-    display: none; } }
+    display: none; }
+
+  .profile-image {
+    min-height: 25px;
+    height: 2vh; }
+
+  .dropdown-menu {
+    right: 0 !important;
+    left: unset !important; } }
+.dropdown-menu show {
+  min-width: none; }
+
+.profile::after {
+  content: unset; }
+
+.profile-image {
+  height: 6vh; }
+
 .bg-orange-1 {
   background-color: #f0813d; }
 
 .orange-1 {
   color: #f0813d; }
+
+.border-orange {
+  border-color: #f0813d !important; }
 
 .bg-gray-1 {
   background-color: #fdf1eb; }
