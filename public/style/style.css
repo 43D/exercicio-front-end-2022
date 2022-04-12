@@ -8690,6 +8690,9 @@ textarea.form-control-lg {
       #sidebar #sidebarCollapse .navbar-nav {
         flex-direction: column; }
 
+  #aside-main {
+    max-height: 31vw; }
+
   #conteudo {
     position: relative;
     margin-left: 17vw; }
@@ -8698,7 +8701,28 @@ textarea.form-control-lg {
     display: none; }
 
   .h-lg-10 {
-    height: 10vh; } }
+    height: 10vh; }
+
+  .mh-75p {
+    min-height: 75px; }
+
+  .mw-25 {
+    min-width: 25%;
+    width: 25%; }
+
+  .mw-50 {
+    min-width: 50%;
+    width: 50%; }
+
+  .mw-100 {
+    min-width: 100%;
+    width: 100%; }
+
+  .overflow-scroll-lg {
+    overflow-y: scroll !important; }
+
+  .inherit {
+    max-height: inherit; } }
 @media (max-width: 991.98px) {
   #sidebar {
     background-color: #f0813d; }
@@ -8709,6 +8733,9 @@ textarea.form-control-lg {
     display: none; } }
 .bg-orange-1 {
   background-color: #f0813d; }
+
+.orange-1 {
+  color: #f0813d; }
 
 .bg-gray-1 {
   background-color: #fdf1eb; }
@@ -8722,7 +8749,26 @@ textarea.form-control-lg {
 .col-0 {
   display: none !important; }
 
-.absolute {
-  position: absolute !important; }
+.font-weight-bold {
+  font-weight: bold; }
+
+.is-pointer {
+  cursor: pointer; }
+
+.list-style-none {
+  list-style: none; }
+
+::-webkit-scrollbar {
+  width: 5px; }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
 
 /*# sourceMappingURL=style.css.map */

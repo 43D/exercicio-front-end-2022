@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid p-0 m-0">
         <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary" id="page">
-            <nav id="sidebar" class="navbar p-0 navbar-expand-lg border-end shadow">
+            <nav id="sidebar" class="navbar p-0 navbar-expand-lg border-end shadow bg-gradient">
                 <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse"
                     data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation" id="buttonCollapse">
@@ -23,10 +23,10 @@
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                     </svg>
                 </button>
-                <div class="bg-orange-1 navbar-brand p-4 m-0 h-10">
-                    <a class="" href="#">SLACA 2019</a>
+                <div class="bg-orange-1 bg-gradient d-flex align-items-center justify-content-center navbar-brand m-0 h-10 mh-75p text-center">
+                    <a class="text-decoration-none font-weight-bold text-light" href="#">SLACA 2019</a>
                 </div>
-                <div class="p-4 m-0 h-10 collapse-lg-mobile">
+                <div class="m-0 h-10 collapse-lg-mobile d-lg-none d-flex align-items-center justify-content-center">
                     profile
                 </div>
                 <div class="collapse-lg">
@@ -56,7 +56,7 @@
                 </div>
             </nav>
             <div class="w-100 p-0" id="conteudo">
-                <header class="row m-0 h-lg-10 bg-gray-1 px-4">
+                <header class="row m-0 h-lg-10 bg-gray-1 mh-75p px-4">
                     <div class="col-12 col-lg-8">
                         <p class="m-0"><span id="titulo">Anais do Simpósio Latino Americano de Ciências de
                                 Alimentos</span></p>
@@ -64,42 +64,135 @@
                                 Alimentos</span></p>
                         <p class="m-0">ISSN: <span id="issn">1234-5678</span></p>
                     </div>
-                    <div class="collapse-lg col-lg-4">profile</div>
+                    <div class="collapse-lg col-lg-4 d-none d-lg-flex align-items-center justify-content-end">profile</div>
                 </header>
                 <main class="m-0 px-4 row">
                     <article class="col-12 row m-0 p-0">
-                        <div class="col-12 col-lg-9 pt-4">
-                            <header>
-                                <h4>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e
-                                    15 anos, do município de Campinas/SP </h4>
-                            </header>
-                            <section class="ratio ratio-16x9">
-                                <video id="main-video" class="video-js absolute vjs-default-skin" poster="./public/img/bbb_thumb.jpg" data-setup='{"controls": true, "autoplay": false, "preload": "auto"}'>
-                                    <source src="https://cdn.discordapp.com/attachments/948435013257543691/963181350309998592/bbb_720.mp4" type="video/mp4" label='1080@30' res='1080'>
+                        <header class="col-12 col-lg-9 pt-4">
+                            <h4>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e
+                                15 anos, do município de Campinas/SP </h4>
+                        </header>
+                        <section class="col-12 col-lg-3 pt-4">
+                            <a class="btn bg-orange-1 bg-gradient text-light mw-50" href="#" download>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cloud-download-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0zm-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z" />
+                                </svg> Download</a>
+                            <button class="btn bg-orange-1 bg-gradient text-light">
+                                <img src="./public/img/star.svg" alt="Favoritos">
+                            </button>
+                            <button class="btn bg-orange-1 bg-gradient text-light">
+                                <img src="./public/img/di.svg" class="text-light" alt="di">
+                            </button>
+                            <div>
+                                <a href="#"
+                                    class="mt-2 ms-2 ms-lg-0 orange-1 text-decoration-none font-weight-bold mw-100">COMO
+                                    CITAR ESSE TRABALHO?</a>
+                            </div>
+                        </section>
+                        <section class="col-12 col-lg-9 mb-3 p-4 row">
+                            <div class="col-12 ratio ratio-16x9 p-0">
+                                <video id="main-video" class="video-js w-100 position-absolute p-0"
+                                    poster="./public/img/bbb_thumb.jpg"
+                                    data-setup='{"controls": true, "autoplay": false, "preload": "auto"}'>
+                                    <source
+                                        src="https://cdn.discordapp.com/attachments/948435013257543691/963181350309998592/bbb_720.mp4"
+                                        type="video/mp4" label='1080@30' res='1080'>
                                     <p class="vjs-no-js">
                                         Ative seu javascript para exibir o video!
                                     </p>
                                 </video>
-                            </section>
-                        </div>
-                        <div class="col-12 col-lg-3 pt-4">
-                            <aside>
-                                aside aaaaaaaaaaaaaaa <br>
-                                aside aaaaaaaaaaaaaaa <br>
-                                aside aaaaaaaaaaaaaaa <br>
-                                aside aaaaaaaaaaaaaaa <br>
-                                aside aaaaaaaaaaaaaaa <br>
-                                aside aaaaaaaaaaaaaaa <br>
-                                aside aaaaaaaaaaaaaaa <br>
-                                aside aaaaaaaaaaaaaaa <br>
-                                aside aaaaaaaaaaaaaaa <br>
-
-                            </aside>
-                        </div>
+                            </div>
+                        </section>
+                        <aside class="row col-12 col-lg-3 mb-3 pt-4 m-0" id="aside-main">
+                            <div class="card text-dark bg-light p-0 inherit">
+                                <div class="card-header">Header</div>
+                                <div class="card-body overflow-scroll-lg">
+                                    <p class="card-text m-0">Tipo de Apresentação: <strong><span
+                                                id="tipoApresentacao">Pôster</span></strong></p>
+                                    <p class="card-text m-0">Eixo temático: <strong><span id="tema">Alimentação e
+                                                saúde (AS)</span></strong></p>
+                                    <p class="card-text">Palavras-chaves: <strong><span id="chaves">Alimentos
+                                                funcionais, alimentação escolar.</span></strong></p>
+                                    <p class="card-text m-0"><strong>Autores:</strong></p>
+                                    <ul class="list-style-none p-0" id="listaAutores">
+                                        <li>Galileo Galilei¹</li>
+                                        <li>Berta Lange de Morretes²</li>
+                                        <li>Isaac Newton³</li>
+                                        <li>Cesar Lattes¹</li>
+                                        <li>Stephen Hawking⁴</li>
+                                        <li>Allan Felipe⁵</li>
+                                    </ul>
+                                    <ul class="list-style-none p-0 fs-6 text-muted" id="listaUniversidades">
+                                        <li>¹Universidade Estadual de Campinas</li>
+                                        <li>²Universidade de São Paulo</li>
+                                        <li>³Instituto Nacional de Pesquisas Espaciais</li>
+                                        <li>⁴Universidade Federal do Rio de Janeiro</li>
+                                        <li>⁵Universidade Tecnologica Federal do Paraná</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </aside>
                         <div class="col-12">
-                            <section>
-                                <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the
-                                    world's most popular web browser today!</p>
+                            <section class="card text-dark bg-light my-4 p-0 w-100">
+                                <div class="card-header">Header</div>
+                                <div class="card-body is-pointer" id="btn-more-main">
+                                    <p class="card-text" id="text-resumo-main"> Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit.
+                                        Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis
+                                        mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna
+                                        ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit
+                                        amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus
+                                        condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus.
+                                        Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.
+                                        <span class="orange-1" id="dots-main">Ver mais...</span>
+                                    </p>
+
+                                    <div id="more-main" class="d-none">
+                                        <p class="card-text" id="text-resumo-1">Fusce vitae luctus dui. Donec id euismod
+                                            mauris, in
+                                            volutpat
+                                            urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis
+                                            vestibulum
+                                            augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id.
+                                            Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit
+                                            interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat
+                                            ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac
+                                            porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam
+                                            in
+                                            laoreet odio.
+                                        </p>
+                                        <p class="card-text" id="text-resumo-2">Nam eget tristique elit, at fermentum
+                                            tellus. Mauris
+                                            scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec
+                                            dapibus.
+                                            Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus
+                                            maximus
+                                            dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper,
+                                            efficitur
+                                            facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet
+                                            enim
+                                            sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus
+                                            hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque
+                                            orci.
+                                            Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu
+                                            posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel,
+                                            interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.
+                                        </p>
+                                        <p class="card-text" id="text-resumo-3">Praesent velit dolor, dignissim sed quam
+                                            ac, efficitur
+                                            porta
+                                            justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi.
+                                            Aliquam
+                                            erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at
+                                            viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec,
+                                            iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec
+                                            varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit
+                                            amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
                             </section>
                         </div>
                     </article>
@@ -150,12 +243,11 @@
                 </footer>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
         <script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
             integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
             crossorigin="anonymous"></script>
+        <script src="./public/script/app.js"></script>
 </body>
 
 </html>
