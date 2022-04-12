@@ -47,7 +47,7 @@
                             aria-expanded="false">
                             <img class="profile-image rounded-circle" src="./public/img/profile.jpg" alt="Perfil">
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownPerfil1">
+                        <ul class="dropdown-menu dropdown-menu-perfil" aria-labelledby="dropdownPerfil1">
                             <li><a class="dropdown-item">Perfil</a></li>
                             <li><a class="dropdown-item">Configurações</a></li>
                             <li><a class="dropdown-item border-top">Sair</a></li>
@@ -72,7 +72,7 @@
                             <a class="nav-link ps-3 text-secondary" href="#">Eixos temáticos</a>
                         </li>
                         <li class="nav-item border-bottom active">
-                            <a class="nav-link ps-3 text-dark border-start border-5 border-orange"
+                            <a class="nav-link ps-3 text-dark border-start border-5 border-orange bg-gray-1"
                                 href="#page">Trabalhos</a>
                         </li>
                         <li class="nav-item border-bottom">
@@ -106,8 +106,8 @@
                             </ul>
                         </div>
                         <div class="ms-3">
-                            <p class="m-0 p-0 text-end">Allan Felipe</p>
-                            <p class="m-0 p-0 text-end">allan.goioere@gmail.com</p>
+                            <p class="m-0 p-0 text-end"><span id="nomePerfil">Allan Felipe</span></p>
+                            <p class="m-0 p-0 text-end"><span id="emialPerfil">allan.goioere@gmail.com</span></p>
                         </div>
                         <div class="dropdown">
                             <a href="#" class="dropdown-toggle profile" id="dropdownPerfil2" data-bs-toggle="dropdown"
@@ -193,7 +193,7 @@
                             </div>
                         </aside>
                         <div class="col-12">
-                            <section class="card text-dark bg-light my-4 p-0 w-100">
+                            <section class="card text-dark my-4 p-0 w-100">
                                 <div class="card-header bg-gray-1">
                                     <h5 class="m-0">Resumo</h5>
                                 </div>
@@ -257,49 +257,199 @@
                         </div>
                     </article>
                 </main>
-                <section class="m-0 px-4 row">
-                    <div class="col">
-                        discussões<br>
-                        <div>
-                            <div id="Botao">
-                                botao
+                <section class="px-4 m-0 row">
+                    <div class="col-12">
+                        <div class="card text-dark">
+                            <div class="card-header bg-gray-1">
+                                <h5 class="m-0">Discussões</h5>
                             </div>
-                            <div id="formulario">
-                                formulario
+                            <div>
+                                <div class="card-body text-center px-lg-5" id="dots-form">
+                                    <h5 class="orange-1">Compartilhe suas ideias ou dúvidas com os autores!</h5>
+                                    <div>
+                                        <img src="./public/img/mao.svg" alt="icones">
+                                        <img src="./public/img/linguagem.svg" alt="icones">
+                                        <img src="./public/img/comunicacao.svg" alt="icones">
+                                    </div>
+                                    <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a
+                                        curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
+                                </div>
+                                <div class="card-body d-none text-center" id="more-form">
+                                    <p class="text-secondary">Tem uma dúvida ou sugestão? Compartilhe seu feedback com
+                                        os autores!</p>
+                                </div>
+                                <div class="card-body d-none text-center" id="more-success-form">
+                                    <h5 class="orange-1">Seu tópico foi enviado com sucesso! :D</h5>
+                                    <p class="text-secondary">Agradecemos por sua contribuição, uma notificação será
+                                        enviada ao seu email assim que seu tópico for respondido!</p>
+                                    <a class="orange-1" href="#">Descubra outros trabalhos!</a>
+                                </div>
+                                <div class="card-body text-center" id="btn-form">
+                                    <button class="btn bg-orange-1 bg-gradient text-light" id="btn-more-form"> <img
+                                            src="./public/img/plus.svg" alt="+"> Criar tópico</button>
+                                    <hr>
+                                </div>
+                                <div class="card-body d-none" id="disc-form">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="assunto"
+                                                class="form-label orange-1 font-weight-bold">Assunto</label>
+                                            <input type="text" class="form-control" id="assunto"
+                                                placeholder="Defina um tópico sucinto para notificar os autores...">
+                                        </div>
+                                        <div class="m-0">
+                                            <p class="orange-1 font-weight-bold">Assunto</p>
+                                            <div class="border h-150 p-4" id='editor' contenteditable>
+                                                Insira seu texto
+                                            </div>
+                                        </div>
+                                        <div class="toolbar text-end border">
+                                            <button class="btn" type="button" data-command='bold'>B</button>
+                                            <button class="btn" type="button" data-command='italic'>I</button>
+                                            <button id="form-enviar" class="btn bg-orange-1 bg-gradient text-light"
+                                                type="button">Enviar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-body d-none text-center" id="success-form">
+                                    <h5 class="text-dark">Aguardando feedback dos autores</h5>
+                                    <a class="orange-1 text-decoration-none" href="#disc-form" id="editar-form">Editar tópico</a>
+                                </div>
                             </div>
-                        </div>
-
-                        <article>
-                            <h3>Missão</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <time>10:00</time>
-                            <address>
-                                Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
-                                Visit us at:<br>
-                                Example.com<br>
-                                Box 564, Disneyland<br>
-                                USA
-                            </address>
-                        </article>
-                        <div>
-                            collapse
-                            <article>
-                                <h3>Visão</h3>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <time>10:00</time>
-                            </article>
-                            <article>
-                                <h3>Valores</h3>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <time>10:00</time>
-                            </article>
+                            <div class="px-3 mb-2" id="com">
+                                <div class="mt-2 shadow" id="com-1">
+                                    <article class="card">
+                                        <div class="card-body is-pointer" id="body-com-1">
+                                            <div class="d-flex justify-content-between m-0">
+                                                <h5 class="card-title m-0"><span id="tit-com-1">Assunto da pergunta de
+                                                        algupem</span></h5>
+                                                <p class="m-0"><span id="check-com-1">check</span></p>
+                                            </div>
+                                            <h6><span id="nome-com-1">Carlos Henrique da silva</span></h6>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make
+                                                up the bulk of the card's content.</p>
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-start align-items-center">
+                                            <div class="dropdown">
+                                                <button class="btn orange-1 me-2 dropdown-toggle text-light drop-com"
+                                                    type="button" id="com-drop-1" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <img src="./public/img/3-dots.svg" alt="menu">
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="com-drop-1">
+                                                    <li><button class="dropdown-item">Denúnciar</button></li>
+                                                    <li><button class="dropdown-item">Responder</button></li>
+                                                </ul>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <button class="btn bg-orange-1 bg-gradient text-light">
+                                                    <img src="./public/img/heart.svg" alt="Favoritar">
+                                                </button>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="mx-4 my-0"><span>4</span> likes</p>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="my-0"><span>2</span> comentarios</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <div class="d-none" id="more-com-1">
+                                        <article class="card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between m-0">
+                                                    <h5 class="card-title m-0"><span id="tit-com-1-res-1">Assunto da
+                                                            pergunta de algupem</span></h5>
+                                                    <p class="m-0"><span id="check-com-1-res-1">check</span></p>
+                                                </div>
+                                                <h6><span id="nome-com-1-res-1">Carlos Henrique da silva</span></h6>
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and
+                                                    make
+                                                    up the bulk of the card's content.</p>
+                                            </div>
+                                        </article>
+                                        <article class="card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between m-0">
+                                                    <h5 class="card-title m-0"><span id="tit-com-1-res-2">Assunto da
+                                                            pergunta de algupem</span></h5>
+                                                    <p class="m-0"><span id="check-com-1-res-2">check</span></p>
+                                                </div>
+                                                <h6><span id="nome-com-1-res-2">Carlos Henrique da silva</span></h6>
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and
+                                                    make
+                                                    up the bulk of the card's content.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="mt-2 shadow" id="com-2">
+                                    <article class="card">
+                                        <div class="card-body is-pointer" id="body-com-2">
+                                            <div class="d-flex justify-content-between m-0">
+                                                <h5 class="card-title m-0"><span id="tit-com-2">Assunto da pergunta de
+                                                        algupem</span></h5>
+                                                <p class="m-0"><span id="check-com-2">check</span></p>
+                                            </div>
+                                            <h6><span id="nome-com-2">Carlos Henrique da silva</span></h6>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make
+                                                up the bulk of the card's content.</p>
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-start align-items-center">
+                                            <div class="dropdown">
+                                                <button class="btn orange-1 me-2 dropdown-toggle text-light drop-com"
+                                                    type="button" id="com-drop-2" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    <img src="./public/img/3-dots.svg" alt="menu">
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="com-drop-2">
+                                                    <li><button class="dropdown-item">Denúnciar</button></li>
+                                                    <li><button class="dropdown-item">Responder</button></li>
+                                                </ul>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <button class="btn bg-orange-1 bg-gradient text-light">
+                                                    <img src="./public/img/heart.svg" alt="Favoritar">
+                                                </button>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="mx-4 my-0"><span>5</span> likes</p>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <p class="my-0"><span>1</span> comentarios</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <div class="d-none" id="more-com-2">
+                                        <article class="card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between m-0">
+                                                    <h5 class="card-title m-0"><span id="tit-com-2-res-1">Assunto da
+                                                            pergunta de algupem</span></h5>
+                                                    <p class="m-0"><span id="check-com-2-res-1">check</span></p>
+                                                </div>
+                                                <h6><span id="nome-com-2-res-1">Carlos Henrique da silva</span></h6>
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and
+                                                    make
+                                                    up the bulk of the card's content.</p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <footer class="row m-0 px-4 h-15">
-                    <div class="col">
-                        pé do site
-                    </div>
+                <footer class="m-0 px-4 h-15">
+                    pé do site
+
+
+
                 </footer>
             </div>
         </div>
@@ -308,7 +458,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/33.0.0/classic/ckeditor.js"></script>
     <script src="./public/script/app.js"></script>
+
 </body>
 
 </html>

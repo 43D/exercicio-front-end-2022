@@ -81,7 +81,7 @@ $sidebar: 17vw;
         min-height: 25px;
         height: 2vh;
     }
-    .dropdown-menu {
+    .dropdown-menu-perfil {
         right: 0 !important;
         left: unset !important;
     }
@@ -90,7 +90,9 @@ $sidebar: 17vw;
 .dropdown-menu show {
     min-width: none;
 }
-.profile::after {
+.profile::after, 
+.drop-com::after,
+.drop-com img::after {
     content: unset;
 }
 .profile-image {
@@ -110,6 +112,9 @@ $sidebar: 17vw;
 }
 .h-10 {
     height: 10vh;
+}
+.h-150 {
+    height: 150px;
 }
 .h-15 {
     height: 15vh;
