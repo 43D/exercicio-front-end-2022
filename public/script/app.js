@@ -8,8 +8,8 @@ window.onload = function () {
     list[0].children[1].onclick = function () { executador(this); }
     list[0].children[0].onclick = function () { executador(this); }
 
-    document.getElementById("body-com-1").onclick = function () { moreCom("1"); };
-    document.getElementById("body-com-2").onclick = function () { moreCom("2"); };
+    document.getElementById("body-com-1").onclick = function () { moreComs("1"); more("com-1"); };
+    document.getElementById("body-com-2").onclick = function () { moreComs("2"); more("com-2");};
 
     function more(id) {
         var dots = document.getElementById("dots-" + id);
@@ -23,8 +23,8 @@ window.onload = function () {
             moreText.classList.remove("d-none");
         }
     }
-    function moreCom(id) {
-        var moreCom = document.getElementById("more-com-" + id);
+    function moreComs(id) {
+        var moreCom = document.getElementById("more-coms-" + id);
         if (moreCom.className.includes("d-none")) {
             moreCom.classList.remove("d-none");
         } else {

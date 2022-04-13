@@ -8732,6 +8732,9 @@ textarea.form-control-lg {
     #sidebar .navbar-collapse {
       background-color: #fff; }
 
+  #cabeca {
+    padding-top: 100px; }
+
   .collapse-lg {
     display: none; }
 
@@ -8752,6 +8755,9 @@ textarea.form-control-lg {
 
 .profile-image {
   height: 6vh; }
+
+.bg-purple-1 {
+  background-color: #59359a; }
 
 .bg-orange-1 {
   background-color: #f0813d; }

@@ -74,6 +74,9 @@ $sidebar: 17vw;
             background-color: $white;
         }
     }
+    #cabeca{
+        padding-top: 100px;
+    }
     .collapse-lg {
         display: none;
     }
@@ -97,6 +100,9 @@ $sidebar: 17vw;
 }
 .profile-image {
     height: 6vh;
+}
+.bg-purple-1{
+    background-color: $purple-600;
 }
 .bg-orange-1 {
     background-color: $orage-1;

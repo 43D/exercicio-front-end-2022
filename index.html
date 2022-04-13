@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid p-0 m-0">
         <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary" id="page">
-            <nav id="sidebar" class="navbar p-0 navbar-expand-lg border-end shadow bg-gradient">
+            <nav id="sidebar" class="navbar fixed-top p-0 navbar-expand-lg border-end shadow bg-gradient">
                 <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse"
                     data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation" id="buttonCollapse">
@@ -82,7 +82,7 @@
                 </div>
             </nav>
             <div class="w-100 p-0" id="conteudo">
-                <header class="row m-0 h-lg-10 bg-gray-1 mh-75p px-4">
+                <header id="cabeca" class="row m-0 h-lg-10 bg-gray-1 mh-75p px-4">
                     <div class="col-12 col-lg-8 d-flex flex-column justify-content-center">
                         <p class="m-0"><span id="titulo">Anais do Simpósio Latino Americano de Ciências de
                                 Alimentos</span></p>
@@ -313,7 +313,8 @@
                                 </div>
                                 <div class="card-body d-none text-center" id="success-form">
                                     <h5 class="text-dark">Aguardando feedback dos autores</h5>
-                                    <a class="orange-1 text-decoration-none" href="#disc-form" id="editar-form">Editar tópico</a>
+                                    <a class="orange-1 text-decoration-none" href="#disc-form" id="editar-form">Editar
+                                        tópico</a>
                                 </div>
                             </div>
                             <div class="px-3 mb-2" id="com">
@@ -322,13 +323,26 @@
                                         <div class="card-body is-pointer" id="body-com-1">
                                             <div class="d-flex justify-content-between m-0">
                                                 <h5 class="card-title m-0"><span id="tit-com-1">Assunto da pergunta de
-                                                        algupem</span></h5>
+                                                        alguém</span></h5>
                                                 <p class="m-0"><span id="check-com-1">check</span></p>
                                             </div>
                                             <h6><span id="nome-com-1">Carlos Henrique da silva</span></h6>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make
-                                                up the bulk of the card's content.</p>
+                                            <div id="text-com-1">
+                                                <p class="card-text">
+                                                    Comecinho da pergunta aparece aqui resente relato inscreve-se no
+                                                    campo
+                                                    da análise da dimensão e impacto de processo formativo situado
+                                                    impacto
+                                                    de processo formativo processo <span id="dots-com-1">...</span>
+                                                    <span id="more-com-1" class="d-none">
+                                                        formativo processo resente relato inscreve-se no campo da
+                                                        análise da
+                                                        dimensão e impacto de processo formativo situado impacto de
+                                                        processo
+                                                        formativo processo?
+                                                    </span>
+                                                </p>
+                                            </div>
                                         </div>
                                         <div class="card-footer d-flex justify-content-start align-items-center">
                                             <div class="dropdown">
@@ -348,40 +362,36 @@
                                                 </button>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-center">
-                                                <p class="mx-4 my-0"><span>4</span> likes</p>
+                                                <p class="mx-2 mx-lg-4 my-0"><span>4</span> likes</p>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-center">
                                                 <p class="my-0"><span>2</span> comentarios</p>
                                             </div>
                                         </div>
                                     </article>
-                                    <div class="d-none" id="more-com-1">
+                                    <div class="d-none" id="more-coms-1">
                                         <article class="card">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-between m-0">
-                                                    <h5 class="card-title m-0"><span id="tit-com-1-res-1">Assunto da
-                                                            pergunta de algupem</span></h5>
+                                                    <h6><span id="nome-com-1-res-1">Maria Eduarda dos Santos</span></h6>
                                                     <p class="m-0"><span id="check-com-1-res-1">check</span></p>
                                                 </div>
-                                                <h6><span id="nome-com-1-res-1">Carlos Henrique da silva</span></h6>
-                                                <p class="card-text">Some quick example text to build on the card title
-                                                    and
-                                                    make
-                                                    up the bulk of the card's content.</p>
+                                                <div id="text-com-1-res-1">
+                                                    <p class="card-text">
+                                                        zzzzzzzzzzzzzzzzzzzz
+                                                    </p>
+                                                </div>
                                             </div>
                                         </article>
                                         <article class="card">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-between m-0">
-                                                    <h5 class="card-title m-0"><span id="tit-com-1-res-2">Assunto da
-                                                            pergunta de algupem</span></h5>
+                                                    <h6><span id="nome-com-1-res-2">Carlos Henrique da silva</span></h6>
                                                     <p class="m-0"><span id="check-com-1-res-2">check</span></p>
                                                 </div>
-                                                <h6><span id="nome-com-1-res-2">Carlos Henrique da silva</span></h6>
-                                                <p class="card-text">Some quick example text to build on the card title
-                                                    and
-                                                    make
-                                                    up the bulk of the card's content.</p>
+                                                <div id="text-com-1-res-2">
+                                                    <p class="card-text">Uma grande resposta.</p>
+                                                </div>
                                             </div>
                                         </article>
                                     </div>
@@ -391,13 +401,26 @@
                                         <div class="card-body is-pointer" id="body-com-2">
                                             <div class="d-flex justify-content-between m-0">
                                                 <h5 class="card-title m-0"><span id="tit-com-2">Assunto da pergunta de
-                                                        algupem</span></h5>
+                                                        alguém</span></h5>
                                                 <p class="m-0"><span id="check-com-2">check</span></p>
                                             </div>
                                             <h6><span id="nome-com-2">Carlos Henrique da silva</span></h6>
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make
-                                                up the bulk of the card's content.</p>
+                                            <div id="text-com-2">
+                                                <p class="card-text">
+                                                    Comecinho da pergunta aparece aqui resente relato inscreve-se no
+                                                    campo
+                                                    da análise da dimensão e impacto de processo formativo situado
+                                                    impacto
+                                                    de processo formativo processo <span id="dots-com-2">...</span>
+                                                    <span id="more-com-2" class="d-none">
+                                                        formativo processo resente relato inscreve-se no campo da
+                                                        análise da
+                                                        dimensão e impacto de processo formativo situado impacto de
+                                                        processo
+                                                        formativo processo?
+                                                    </span>
+                                                </p>
+                                            </div>
                                         </div>
                                         <div class="card-footer d-flex justify-content-start align-items-center">
                                             <div class="dropdown">
@@ -417,26 +440,37 @@
                                                 </button>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-center">
-                                                <p class="mx-4 my-0"><span>5</span> likes</p>
+                                                <p class="mx-2 mx-lg-4 my-0"><span>5</span> likes</p>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-center">
                                                 <p class="my-0"><span>1</span> comentarios</p>
                                             </div>
                                         </div>
                                     </article>
-                                    <div class="d-none" id="more-com-2">
+                                    <div class="d-none" id="more-coms-2">
                                         <article class="card">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-between m-0">
-                                                    <h5 class="card-title m-0"><span id="tit-com-2-res-1">Assunto da
-                                                            pergunta de algupem</span></h5>
+                                                    <h6><span id="nome-com-2-res-1">Rafael Souza da silva</span></h6>
                                                     <p class="m-0"><span id="check-com-2-res-1">check</span></p>
                                                 </div>
-                                                <h6><span id="nome-com-2-res-1">Carlos Henrique da silva</span></h6>
-                                                <p class="card-text">Some quick example text to build on the card title
-                                                    and
-                                                    make
-                                                    up the bulk of the card's content.</p>
+                                                <div id="text-com-2-res-1">
+                                                    <p class="card-text">
+                                                        Também ínteressante lembrar que o relato inscreve-se no campo da
+                                                        análise da dimensão e impacto de processo formativo situado
+                                                        impacto
+                                                        de processo formativo processo resente relato inscreve-se no
+                                                        campo
+                                                        da análise da dimensão e impacto de processo formativo situado
+                                                        impacto de processo formativo processo.
+                                                    </p>
+                                                    <p class="card-text">
+                                                        Situado impacto de processo formativo processo resente relato
+                                                        inscreve-se no campo da análise da dimensão e impacto de
+                                                        processo
+                                                        formativo situado impacto de processo formativo processo.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </article>
                                     </div>
@@ -445,11 +479,23 @@
                         </div>
                     </div>
                 </section>
+                <hr class="mt-4">
                 <footer class="m-0 px-4 h-15">
-                    pé do site
-
-
-
+                    <div class="row">
+                        <div class="col-12 mb-2 col-lg-2 text-center">
+                            <a href="#">
+                                <img src="./public/img/galoa-logo.svg" alt="Galoa">
+                            </a>
+                            <button class="btn btn-sm w-100 bg-purple-1 text-light">Saiba mais</button>
+                        </div>
+                        <div class="col mb-5">
+                            <p><strong>Presevar a memória do evento e ampliar o acesso ao conhecimento
+                                    científico</strong> gerando em eventos é a razão da plataforma Galoá Proceedings</p>
+                            <p>Os trabalhos publicados aqui tem maior alcance e ficam disponíveis para toda comunidade
+                                científica, mantendo o acesso o debate cientifico fomentado pelos encontros e aumentando
+                                o impacto do evento.</p>
+                        </div>
+                    </div>
                 </footer>
             </div>
         </div>
