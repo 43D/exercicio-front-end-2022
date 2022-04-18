@@ -1,77 +1,69 @@
-window.onload = function () {
-    document.getElementById("btn-more-main").onclick = function () { more("main") };
-    document.getElementById("btn-more-form").onclick = function () { more("form"); showFrom(); changeText(this, "Criar novo tópico") };
-    document.getElementById("form-enviar").onclick = function () { showSuccessFrom(); };
-    document.getElementById("editar-form").onclick = function () { showFrom(); };
+$(function () {
+    $("#btn-more-main").click(function () { moreText("main") });
+    $("#btn-more-form").click(function () { moreText("form"); showFrom(); changeText($("#btn-more-form"), "Criar novo tópico") });
+    $("#form-enviar").click(function () { showSuccessFrom(); });
+    $("#editar-form").click(function () { showFrom(); });
+    $("#body-com-1").click(function () { moreComs("1"); moreText("com-1"); });
+    $("#body-com-2").click(function () { moreComs("2"); moreText("com-2"); });
 
-    list = document.getElementsByClassName("toolbar");
-    list[0].children[1].onclick = function () { executador(this); }
-    list[0].children[0].onclick = function () { executador(this); }
+    // Não funciona com func click do Jquery 
+    let listButton = $(".toolbar")[0].children;
+    listButton[1].onclick = function () { executador(this); }
+    listButton[0].onclick = function () { executador(this); }
+});
 
-    document.getElementById("body-com-1").onclick = function () { moreComs("1"); more("com-1"); };
-    document.getElementById("body-com-2").onclick = function () { moreComs("2"); more("com-2");};
+function removeNone(Object) {
+    Object.removeClass("d-none");
+}
+function addNone(Object) {
+    Object.addClass("d-none");
+}
+function hasNone(Object) {
+    return Object.hasClass("d-none");
+}
+function switchNone(Object1, Object2) {
+    Object1.addClass("d-none");
+    Object2.removeClass("d-none");
+}
+function moreText(id) {
+    let dots = $("#dots-" + id);
+    let text = $("#more-" + id);
 
-    function more(id) {
-        var dots = document.getElementById("dots-" + id);
-        var moreText = document.getElementById("more-" + id);
+    if (hasNone(dots))
+        switchNone(text, dots);
+    else
+        switchNone(dots, text);
+}
+function moreComs(id) {
+    let coms = $("#more-coms-" + id);
+    if (hasNone(coms))
+        removeNone(coms);
+    else
+        addNone(coms);
+}
+function changeText(Object, text) {
+    Object.html(text);
+}
+function showFrom() {
+    addNone($("#btn-form"));
+    addNone($("#more-success-form"));
+    addNone($("#success-form"));
+    removeNone($("#disc-form"));
+    removeNone($("#more-form"));
+}
+function clearForm() {
+    $("#assunto").val("");
+    $("#editor").html("");
+}
+function showSuccessFrom() {
+    removeNone($("#btn-form"));
+    removeNone($("#more-success-form"));
+    removeNone($("#success-form"));
+    addNone($("#disc-form"));
+    addNone($("#more-form"));
 
-        if (dots.className.includes("d-none")) {
-            moreText.classList.add("d-none");
-            dots.classList.remove("d-none");
-        } else {
-            dots.classList.add("d-none");
-            moreText.classList.remove("d-none");
-        }
-    }
-    function moreComs(id) {
-        var moreCom = document.getElementById("more-coms-" + id);
-        if (moreCom.className.includes("d-none")) {
-            moreCom.classList.remove("d-none");
-        } else {
-            moreCom.classList.add("d-none");
-        }
-    }
-
-    function changeText(objeto, texto) {
-        objeto.innerHTML = texto;
-    }
-    function showFrom() {
-        var btn = document.getElementById("btn-form");
-        var more = document.getElementById("more-form");
-        var div = document.getElementById("disc-form");
-        var divMore = document.getElementById("more-success-form");
-        var success = document.getElementById("success-form");
-        btn.classList.add("d-none");
-        divMore.classList.add("d-none");
-        success.classList.add("d-none");
-        div.classList.remove("d-none"); 
-        more.classList.remove("d-none");
-    }
-    function clearForm(){
-        var assunto = document.getElementById("assunto");
-        var editor = document.getElementById("editor");
-        assunto.value = "";
-        editor.innerHTML = "";
-    }
-
-    function showSuccessFrom() {
-        var btn = document.getElementById("btn-form");
-        var div = document.getElementById("more-success-form");
-        var divForm = document.getElementById("disc-form");
-        var moreForm = document.getElementById("more-form");
-        var success = document.getElementById("success-form");
-
-        divForm.classList.add("d-none");
-        moreForm.classList.add("d-none");
-        success.classList.remove("d-none");
-        div.classList.remove("d-none");
-        btn.classList.remove("d-none");
-
-        document.getElementById("btn-more-form").onclick = function () { showFrom(); clearForm(); };
-    }
-
-
-    function executador(objeto) {
-        document.execCommand(objeto.dataset.command, false, null);
-    }
+    $("#btn-more-form").click(function () { showFrom(); clearForm(); });
+}
+function executador(objeto) {
+    document.execCommand(objeto.dataset.command, false, null);
 }
